@@ -828,7 +828,6 @@ background: #fff;
 }
     }
 
-
     .footer {
       background: #2e2f42;
       display: flex;
@@ -844,13 +843,13 @@ background: #fff;
   }
   
 
-    .footer-container-text{
-  margin-bottom: 72px;
-  margin-top: 96px;
-  margin-left: 16px;
-  margin-right: 16px;
-text-align: center;
-    }
+  .footer-container-text{
+    margin-bottom: 72px;
+    margin-top: 96px;
+    margin-left: 16px;
+    margin-right: 16px;
+  text-align: center;
+      }
     
 
     .footer__logo {
@@ -1008,40 +1007,58 @@ text-align: center;
     
     @media screen and (min-width: 768px) {
 
-     
+      .footer-container {
+        display: flex;
+        flex-direction: row; /* Ставит элементы по вертикали */
+        align-items: center; /* Центрирует элементы внутри контейнера по горизонтали */
+        flex-wrap: wrap;
+        gap: 72px 24px;
+       
+    }
 
-      .footer-container-text{
-        margin-bottom: 72px;
-        margin-top: 96px;
-        margin-left: 108px;
-        margin-right: 24px;
-          }
+    .footer {
+      background: #2e2f42;
+      display: flex;
+      justify-content: center; /* Центрирует контейнер по горизонтали */
+      align-items: center; /* Центрирует контейнер по вертикали */
+      flex-direction: column; /* Ставит элементы по вертикали */
+      padding: 96px 0;
+  }
+  
+  .footer-container {
+      display: flex;
+      flex-direction: row; /* Ставит элементы по вертикали */
+      align-items: flex-start; /* Центрирует элементы внутри контейнера по горизонтали */
+      flex-wrap: wrap;
+      gap: 72px 24px;
+  }
+   
+  .footer__form{
+    display: flex;
+    flex-direction: row; /* Элементы выстраиваются вертикально */
+    align-items: center; /* Центрирует элементы по горизонтали */
+    gap: 24px;
+  }
 
-          .footer-icons {
-         margin-bottom: 104px;
-          }
-
+  .footer__description{
+    align-items: center;
+  }
+      
+  .footer-container-text{
+margin: 0;
+      }
       
     }
 
 
     
     @media screen and (min-width: 1158px) {
-      .footer {
-        justify-content: center; /* Центрирует контейнер по горизонтали */
-      }
+
       .footer-container {
-        display: flex; /* Применение flexbox */
-        justify-content: flex-start; /* Распределение пространства между элементами */
-        align-items: baseline, 
+        flex-wrap: nowrap;
+        gap: unset;
       }
-      .footer-container-text{
-        margin-right: 120px;
-      }
-      
-      
-      
-      
+    
       .footer-container-social {
         margin-right: 80px;
         align-items: flex-start;
@@ -1054,7 +1071,7 @@ text-align: center;
       }
       
       .footer__form_input{
-        width: 264px;
+        max-width: 264px;
        font-size: 12px;
       }
     }
