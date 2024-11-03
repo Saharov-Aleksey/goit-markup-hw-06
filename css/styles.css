@@ -834,6 +834,7 @@ background: #fff;
       justify-content: center; /* Центрирует контейнер по горизонтали */
       align-items: center; /* Центрирует контейнер по вертикали */
       flex-direction: column; /* Ставит элементы по вертикали */
+      padding: 96px 0;
   }
   
   .footer-container {
@@ -844,11 +845,9 @@ background: #fff;
   
 
   .footer-container-text{
-    margin-bottom: 72px;
-    margin-top: 96px;
-    margin-left: 16px;
-    margin-right: 16px;
-  text-align: center;
+
+    
+
       }
     
 
@@ -886,9 +885,13 @@ background: #fff;
 
     .footer-container-social {
       gap: 16px;
-   
-
+        margin-bottom: 72px;
     }
+
+    .footer-container-text{
+      text-align: center;
+      margin-bottom: 72px;
+            }
 
     .footer-text-icons {
       font-weight: 500;
@@ -904,9 +907,7 @@ background: #fff;
       display: flex;
       flex-direction: row; /* Горизонтальная компоновка иконок */
       list-style-type: none; /* Убирает маркеры */
-      margin-left: 56px;
-      margin-right: 56px;
-      margin-bottom: 72px;
+
    gap: 16px; 
     }
 
@@ -941,7 +942,7 @@ background: #fff;
       display: flex;
       flex-direction: column; /* Элементы идут в колонку */
       align-items: center; /* Центрирует элементы формы */
-      margin-bottom: 96px;
+
      
     }
 
@@ -1006,74 +1007,33 @@ background: #fff;
     }
     
     @media screen and (min-width: 768px) {
-
-      .footer-container {
-        display: flex;
-        flex-direction: row; /* Ставит элементы по вертикали */
-        align-items: center; /* Центрирует элементы внутри контейнера по горизонтали */
-        flex-wrap: wrap;
-        gap: 72px 24px;
-       
-    }
-
-    .footer {
-      background: #2e2f42;
-      display: flex;
-      justify-content: center; /* Центрирует контейнер по горизонтали */
-      align-items: center; /* Центрирует контейнер по вертикали */
-      flex-direction: column; /* Ставит элементы по вертикали */
-      padding: 96px 0;
-  }
-  
-  .footer-container {
-      display: flex;
-      flex-direction: row; /* Ставит элементы по вертикали */
-      align-items: flex-start; /* Центрирует элементы внутри контейнера по горизонтали */
-      flex-wrap: wrap;
-      gap: 72px 24px;
-  }
-   
-  .footer__form{
-    display: flex;
-    flex-direction: row; /* Элементы выстраиваются вертикально */
-    align-items: center; /* Центрирует элементы по горизонтали */
-    gap: 24px;
-  }
-
-  .footer__description{
-    align-items: center;
-  }
-      
-  .footer-container-text{
-margin: 0;
+      .footer__description {
+        max-width: 264px;
       }
-      
+
+      .conteiner_footer__form{
+
+        align-items: flex-start; /* Центрирует элементы формы */
+  
+       
+      }
+      .footer-text-icons {
+
+        text-align: left; /* Центрирует текст внутри каждого элемента */
+      }
+     .footer-container{
+      width: 584px;
+     }
+
     }
 
 
     
     @media screen and (min-width: 1158px) {
-
-      .footer-container {
-        flex-wrap: nowrap;
-        gap: unset;
-      }
-    
-      .footer-container-social {
-        margin-right: 80px;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 16px;
-      }
-      .footer__form{
-        display: flex;
-        gap: 24px;
-      }
-      
-      .footer__form_input{
-        max-width: 264px;
-       font-size: 12px;
-      }
+.footer-container-text{
+  margin-right: 120px;
+}
+  
     }
     
 /* $$$$$$$$$$$$$$$$$$MODAL$$$$$$$$$$$$$$$$$$$$$$$ */
