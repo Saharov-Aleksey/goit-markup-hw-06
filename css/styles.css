@@ -95,9 +95,19 @@ body {
   color: #4d5ae5; /* Задаёт цвет текста */
 }
 
-.header__logo.logo-part {
+.logo-part {
   color: #2e2f42;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
+
+
+
+
 
 .logo {
   padding: 16px 0;
@@ -424,7 +434,7 @@ body {
 }
 @media screen and (min-width: 1158px) {
   .main-content__intro {
-    min-width: 1440px;
+    min-width: 1158px;
     height: 600px;
   }
   .main-content__title {
@@ -455,6 +465,7 @@ body {
   max-width: 320px;
   margin: 0 auto; /* Центрирует секцию на странице */
   margin-bottom: 96px;
+
 }
 
 .main-content__feature-list {
@@ -548,6 +559,9 @@ text-align: start;
 
   .main-content__features {
     max-width: 1158px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 
 
@@ -555,8 +569,9 @@ text-align: start;
     gap: 24px;
   }
   .main-content__feature-item {
-    width: calc((100% - 72px) / 4);
-
+    width: calc((100% - 72px) / 4); /* Равномерное распределение для четырёх колонок */
+    height: 256px;
+   width: 236px;
   }
   .content-social-icon {
     display: flex;
@@ -566,7 +581,8 @@ text-align: start;
     border: 1px solid #8e8f99;
   border-radius: 4px;
   margin-bottom: 8px;
-  height: 112px;
+  width: 100%;
+  height: 100px; /* Установите одинаковую высоту для всех иконок */
   }
   .content-icon {
     width: 60;
@@ -610,6 +626,7 @@ font-weight: 400;
   flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
   gap: 72px; /* Отступ между колонками */
   margin-bottom: 96px;
+  justify-content: center;
 }
 
 .main-content__team-list:last-child {
@@ -1010,19 +1027,25 @@ background: #fff;
       .footer__description {
         max-width: 264px;
       }
+      .footer__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 
       .conteiner_footer__form{
+        display: flex;
+        align-items: flex-start;
 
-        align-items: flex-start; /* Центрирует элементы формы */
-  
-       
       }
       .footer-text-icons {
-
         text-align: left; /* Центрирует текст внутри каждого элемента */
       }
      .footer-container{
       width: 584px;
+      flex-direction: row;
+      flex-wrap: wrap;
+       align-items: flex-start;
      }
 
     }
